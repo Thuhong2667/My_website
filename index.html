@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=712">
+<title>Registration Form</title>
+<style>
+*{box-sizing: border-box;}
+body{
+	margin: 8px;
+	front-family:"Times New Roman", Times, serif;
+	front-size: 16px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	min-heght: 100vh; }
+#page{
+	width: 696px;
+	margin: 0 auto;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background:#99CCFF; }
+.logo{
+	position: relative;
+	width:316px;
+	height:80px;
+	margin: 0 auto;
+	background:#00FFFF;
+	border: 1px solid #000; 
+    border-radius: 9px;
+    box-shadow: 5px 5px 4px #6f7f95;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px; }
+.logo .line{
+	height: 39px;
+	line-height: 35px;
+	padding-left: 14px; }
+.logo .top {
+	border-bottom: 4px solid #000; }
+.logo .bottom {line-height: 37px;}
+h2 {
+	margin: 36px 0 0;
+	font-size: 26px;
+    line-height: 30px;
+    text-align: center; }
+.intro{margin: 23px 0 0;
+	   line-height: 18px;
+	   text-align: center; }
+table {border-collapse: collapse;} 
+td {padding: 0;}
+table.form {
+    table-layout: fixed;
+    width: 576px;
+    margin: 5px 0 0 66px;}
+table.form td{vertical-align: middle;}
+tr.r29 td{ height: 29px;}
+tr.r28 td{ height: 28px;}
+input[type="text"], select, textarea{
+	font-family: inherit;
+	font-size: 16px;}
+input[type="text"], select {height: 23px; vertical-align: middle;}
+.w-name {width: 124px;}
+.w-address {width: 224px;}
+.w-city {width: 158px;}
+.w-state {width: 45px;}
+.w-zip {width: 77px;}
+.w-select {width: 127px;}
+.w-date {width: 158px;}
+hr {height: 2px;
+	margin: 0;
+	border: 0;
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #ffff; }
+td.hr1 {padding: 9px 0 10px;}
+td.hr2 {padding: 13px 0 16px;}
+tr.group td {vertical-align: top; line-height: 22px;}
+tr.used td {height: 69px; padding-top: 3px;}
+tr.sys td {height: 50px; padding-top: 6px;}
+input[type="radio"] {accent-color: #2e7d32;}
+table.opts {width: 100%; table-layout: fixed;}
+table.opts td {height: 22px; padding: 0; vertical-align: middle;}
+table.opts td:first-child {width: 152px;}
+tr.comments td {height: 111px; vertical-align: top;}
+tr.comments td.label {padding-top: 1px; line-height: 18px;}
+textarea {
+	display: block;
+	width: 377px;
+	height:111px;
+	resize: none; }
+.buttons {display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin-top: 9px;}
+.buttons input {width: 118px; height: 21px;}
+</style>
+</head>
+<body>
+<div id="page">
+	<div class="logo">
+		<div class="line top"><div class="bolt" aria-hidden="true"></div>
+	Jackson</div>
+	<div class="line bottom">Electronics</div>
+</div>
+<h2>Registration Form</h2>
+<p class="intro">Register your Jackson Electronics product here</p>
+<form action="#" method="POST">
+<table class="form">
+<colgroup>
+	<col style="width: 198px">
+	<col style="width: 378px">
+</colgroup>
+<tr class="r29">
+	<td><label for="fname">First Name:</label></td>
+	<td>
+		<input type="text" id="fname" name="fname" class="w-name">
+		<label for="lname">Last Name:</label>
+		<input type="text" id="lname" name="lname" class="w-name">
+	</td>
+</tr>
+<tr class="r29">
+	<td><label for="address1">Address #1:</label></td>
+	<td><input type="text" id="address1" name="address1" class="w-address"></td>
+</tr>
+<tr class="r29">
+	<td><label for="address2">Address #2:</label></td>
+	<td><input type="text" id="address2" name="address" class="w-address"></td>
+</tr>
+<tr class="r29">
+	<td><label for="city">City:</label></td>
+	<td>
+		<input type="text" id="city" name="city" class="w-city"><label for="state">State:</label>
+		<input type="text" id="state" name="state" class="w-state">
+		<label for="zip">Zip:</label>
+		<input type="text" id="zip" name="zip" class="w-zip">
+	</td>
+</tr>
+<tr class="r29">
+        <td><label for="country">Country:</label></td>
+        <td><input type="text" id="country" name="country" class="w-city" value="United States"></td>
+        </tr>
+<tr><td colspan="2" class="hr1"><hr></td></tr>
+<tr class="r28">
+	<td><label for="product">Product:</label></td>
+	<td>
+		<select id="product" name="product" class="w-select">
+			<option value="ScanMaster" selected>ScanMaster</option>
+		</select>
+	</td>
+</tr><tr class="r28">
+	<td><label for="date">Data Purchases:</label></td>
+	<td><input type="text" id="date" name="date" class="w-date"></td>
+</tr>
+<tr class="r28">
+	<td><label for="serial">Serial #:</label></td>
+	<td><input type="text" id="serial" name="serial" class="w-date"></td>
+</tr>
+<tr class="group used">
+	<td>Used for:</td>
+	<td>
+		<table class="opts">
+			<tr>
+			<td><label><input type="radio" name="usedfor" value="Home">
+			Home</label></td>
+			<td><label><input type="radio" name="usedfor" value="Educational Instiution">Educational Instiution</label></td>
+		</tr>
+		<tr>
+			<td><label><input type="radio" name="usedfor" value="Business" checked>Business</label></td>
+			<td><label><input type="radio" name="usedfor" value="Other">Other</label></td>
+		</tr>
+		<tr>
+			<td><label><input type="radio" name="usedfor" value="Goverment">Goverment</label></td>
+			<td></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr class="group sys">
+	<td>System (check all that apply):</td>
+	<td>
+		<table class="opts">
+	<tr>
+		<td><label><input type="checkbox" name="sys_windows" value="Windows">Windows</label></td>
+		<td><label><input type="checkbox" name="sys_unix" value="UNIX">UNIX</label></td>
+	</tr>
+	<tr>
+		<td><label><input type="checkbox" name="sys_mac" value="Macintosh">Macintosh</label></td>
+		<td><label><input type="checkbox" name="sys_other" value="Other">Other</label></td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr><td colspan="2" class="hr2"><hr></td></tr>
+<tr class="comments">
+	<td class="label"><label for="comments">Comments?:</label></td>
+	<td><textarea id="comments" name="comments"></textarea></td>
+</tr>
+</table>
+<div class="buttons">
+	<input type="submit" value="Click to register">
+	<input type="reset" value="Click to cancel">
+</div>
+</form>
+</div>
+</body>
+</html>
