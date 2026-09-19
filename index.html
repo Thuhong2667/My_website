@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=712">
-<title>Registration Form</title>
+<title>Jackson Electronics</title>
 <style>
 *{box-sizing: border-box;}
 body{
 	margin: 8px;
-	front-family:"Times New Roman", Times, serif;
-	front-size: 16px;
+	font-family:"Times New Roman", Times, serif;
+	font-size: 18px;
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -32,7 +32,7 @@ body{
     overflow: hidden;
     text-align: center;
     font-weight: bold;
-    font-size: 35px; }
+    font-size: 29px; }
 .logo .line{
 	height: 39px;
 	line-height: 35px;
@@ -41,11 +41,12 @@ body{
 	border-bottom: 4px solid #000; }
 .logo .bottom {line-height: 37px;}
 h2 {
-	margin: 36px 0 0;
+	margin-top: 12px 0 0;
 	font-size: 26px;
     line-height: 30px;
     text-align: center; }
-.intro{margin: 23px 0 0;
+.intro{margin: 10px 0 0;
+	   font-size: 16px;
 	   line-height: 18px;
 	   text-align: center; }
 table {border-collapse: collapse;} 
@@ -71,8 +72,9 @@ input[type="text"], select {height: 23px; vertical-align: middle;}
 hr {height: 2px;
 	margin: 0;
 	border: 0;
-	border-top: 1px solid #808080;
-	border-bottom: 1px solid #ffff; }
+	border-top: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	background: #000; }
 td.hr1 {padding: 9px 0 10px;}
 td.hr2 {padding: 13px 0 16px;}
 tr.group td {vertical-align: top; line-height: 22px;}
@@ -125,7 +127,7 @@ textarea {
 </tr>
 <tr class="r29">
 	<td><label for="address2">Address #2:</label></td>
-	<td><input type="text" id="address2" name="address" class="w-address"></td>
+	<td><input type="text" id="address2" name="address2" class="w-address"></td>
 </tr>
 <tr class="r29">
 	<td><label for="city">City:</label></td>
@@ -149,7 +151,7 @@ textarea {
 		</select>
 	</td>
 </tr><tr class="r28">
-	<td><label for="date">Data Purchases:</label></td>
+	<td><label for="date">Data Purchased:</label></td>
 	<td><input type="text" id="date" name="date" class="w-date"></td>
 </tr>
 <tr class="r28">
@@ -161,16 +163,15 @@ textarea {
 	<td>
 		<table class="opts">
 			<tr>
-			<td><label><input type="radio" name="usedfor" value="Home">
-			Home</label></td>
-			<td><label><input type="radio" name="usedfor" value="Educational Instiution">Educational Instiution</label></td>
+			<td><label><input type="radio" name="usedfor" value="Home">Home</label></td>
+			<td><label><input type="radio" name="usedfor" value="Educational Instiution">Educational Institution</label></td>
 		</tr>
 		<tr>
 			<td><label><input type="radio" name="usedfor" value="Business" checked>Business</label></td>
 			<td><label><input type="radio" name="usedfor" value="Other">Other</label></td>
 		</tr>
 		<tr>
-			<td><label><input type="radio" name="usedfor" value="Goverment">Goverment</label></td>
+			<td><label><input type="radio" name="usedfor" value="Government">Government</label></td>
 			<td></td>
 		</tr>
 		</table>
