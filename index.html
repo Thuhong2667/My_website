@@ -11,16 +11,16 @@
 		--red: #d40000;
 		--brown: #a52a2a;
 		--line: #92545c; }
-	*{box-sizing: border-box;}
+*{box-sizing: border-box;}
 body{margin: 10px;
      font-family: "Times New Roman", serif;
      font-size: 13px;
-     background: #f4f4f4; }
+     background: #ffffff; }
 .page{border: 1px solid var(--line);
       transform: scale(0.75);
       transform-origin: top center;
 	margin-top: 5px;
-	margin-bottom: -280px; }
+	margin-bottom: -450px; }
 header {height: 65px;
 	padding-left: 2px;
         display: flex;
@@ -81,7 +81,6 @@ header h1 {margin: 0;
          grid-template-columns: 187px 1fr 309px;
          column-gap: 8px;
          padding: 8px 0 23px 0; }
-
 
 .drinks {list-style: none;
          margin: 0;
@@ -147,7 +146,7 @@ main h2#information {height: 22px;
                    display: grid;
                    grid-template-columns: 330px 330px;
                    column-gap: 24px;
-                   row-gap: 23.2px;
+                   row-gap: 28px;
                    font-family: Arial, sans-serif;
                    font-size: 12px; }
 .information-form input[type="text"],
@@ -177,7 +176,7 @@ main h2#information {height: 22px;
                             padding: 3px; }
 .information-form textarea::placeholder {color: #000;}
 .buttons {grid-column: 1/-1;
-          margin-top: -11px;
+          margin-top: -2px;
           display: flex;
           gap: 3px; }
 .buttons button {height: 32px;
@@ -192,24 +191,27 @@ main h2#information {height: 22px;
 .right {align-self: start;
         background: #000;
         color: #fff;
+        margin-top: 0px;
         padding-bottom: 15px; }
-.right h2 {margin: 0 31px 0 30px;
-	   margin-left: -0.1px;
+.right h2 {margin: 0 20px 10px 20px;
+	   margin-left: 2px;
            padding-left: 0px;
-           font-size: 28px;
-           font-weight: nomal;
+           font-size: 22px;
+           font-weight: bold;
            letter-spacing: -1.4px;
            line-height: 30px; } 
-.right h3 {margin: 17px 31px 0 32px;
-           font-size: 19px;
-           line-height: 20px; }
+.right h3 {margin: 14px 15px 6px 15px;
+           font-size: 15px;
+           font-weight: bold;
+           line-height: 18px; }
 .right img {display: block;
-            width: 248px;
-            height: 140px;
-            margin: 0 31px 0 30px; }
-.right p {margin: 0 31px 34px 30px;
-          font-size: 13px;
-          line-height: 15px; }
+            width: calc(100% - 30px);
+            height: auto;
+            margin: 0 15px; }
+.right p {margin: 6px 15px 12px 15px;
+          font-size: 11px;
+          line-height: 16px;
+          word-break: break-word; }
 .more {display: none; }
 .toggle {display: none; }
 .toggle:checked + p .more {display: inline; }
@@ -222,6 +224,7 @@ main h2#information {height: 22px;
 #more2:checked ~ .extra {display: block; } 
 .extra h3 + .toggle + p {margin-top: 4px; }
 .right > p:nth-last-child(2), .extra p {margin-bottom: 0; }
+.right p:last-child {margin-bottom: 0;}
 
 
 footer {height: 65px;
@@ -239,7 +242,7 @@ footer sup {font-size: 20px;
             margin: 0 8px 0 6px;
             line-height: 0;
             position: relative;
-            top: -6px; }
+            top: -5px; }
 </style>
 </head>
 <body>
@@ -319,6 +322,8 @@ footer sup {font-size: 20px;
 	<img src="meeting.jpg" alt="Regular Meetings">
 	<input type="checkbox" id="more1" class="toggle">
 	<p>Host your regular team meetings or activities in the comfort of your own private room. <span class="more">Charge up on Kith's aromatic coffee and delectable dishes for that extra boost in your work!</span><label for="more1" class="read-more"></label></p>
+
+
 
 	<h3>Product Launches</h3>
 	<img src="cafe.jpg" alt="Product Launches">
