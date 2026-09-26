@@ -1,342 +1,304 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="utf-8">
-<title>Example cafe menu</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Website</title>
 <style>
-	:root {
-		--pink: #ea9696;
-		--dark-red: #a52a2a;
-		--red: #d40000;
-		--brown: #a52a2a;
-		--line: #92545c; }
-*{box-sizing: border-box;}
-body{margin: 10px;
-     font-family: "Times New Roman", serif;
-     font-size: 13px;
-     background: #ffffff; }
-.page{border: 1px solid var(--line);
-	  margin-top: 5px;
-	  margin-bottom: -450px; }
-header {height: 65px;
-	    padding-left: 2px;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #FFFFFF;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: #333333;
         display: flex;
-        justify-content: center;
-        align-items: center; }
-header h1 {margin: 0;
-           font-size: 32.5px;
-           font-style: italic;
-           color: var(--dark-red);
-           text-shadow: 8px 8px 2px #efb3b8; }
-.top-nav {height: 37px;
-	      padding-right: 5px;
-          background: var(--pink);
-          border-top: 1px solid var(--line);
-          display: flex;
-          justify-content: center;
-          align-items: flex-start; }
-.top-nav a {width: 132px;
-	        height: 27px;
-	        margin-top: 4px;
-	        padding: 6px 0 0 12px;
-            text-align: center;
-            line-height: 19px;
-            border-right: 1px solid #7b2d9e;
-            color: #fff;
-            font-weight: bold;
-            font-size: 13px;
-            text-decoration: none; }
-.top-nav a:nth-child(3) {width: 133px; }
-.top-nav a.home {width: 42px;
-	             padding: 0;
-	             margin-top: 1px;
-	             height: 30px;
-                 justify-content: center;
-                 display: flex; 
-                 align-items: center; }
-.top-nav a.home img {width: 19px;
-	                 height: 19px;;
-	                 margin-top: -4px;
-	                 mix-blend-mode: multiply; }
-.search {margin: 12px 0 0 48px;
-         display: flex;
-         gap: 4px; }
-.search input {width: 138px;
-               height: 17px;
-               border: 1px solid #767676; }
-.search button {height: 17px;
-	            padding: 0 5px;
-	            border: 1px solid #767676;
-	            border-radius: 2px;
-	            background: #efefef;
-	            cursor: pointer;
-                font-size: 11px;
-                font-family: Arial, sans-serif; }
-
-
-.layout {display: grid;
-         grid-template-columns: 187px 1fr 309px;
-         column-gap: 8px;
-         padding: 8px 0 23px 0; }
-
-.drinks {list-style: none;
-         margin: 0;
-         padding: 0; }
-.drinks li {margin-bottom: 3px;
-            width: 186px; }
-.drinks a {display: block;
-           background: var(--pink);
-           color: #fff;
-           border-radius: 13px;
-           padding: 0 16px;
-           line-height: 25px;
-           font-size: 13px;
-           text-decoration: none; }
-.team {display: block;
-       width: 187px;
-       height: 120px;
-       margin-top: 17px;
-       border-radius: 50%;
-       box-shadow: 6px 14px 15px lightpink; }
-
-
-main h2 {width: 367px;
-	     height: 30px;
-	     margin: 0 0 0 183px;
-	     padding-left: 16px;
-	     background: var(--pink);
-	     color: var(--dark-red);
-	     font-size: 28px;
-	     line-height: 30px;
-	     letter-spacing: 15px; }
-main h2#information {height: 22px;
-                     line-height: 22px;
-                     font-size: 21px;
-                     text-transform: uppercase;
-                     margin-top: 8px; }
-.food {margin: 1px 0 0;
-       padding-left: 31px;
-       line-height: 15px; }
-#starter + .food {margin-top: -1px; }
-.food {list-style: none; }
-.food li {position: relative; }
-.food li::before {content: "";
-	              position: absolute;
-	              left: -10px;
-	              top: 7px;
-	              width: 4px;
-	              height: 4px;
-	              border-radius: 50%;
-	              background: #000; }
-.food .special {color: #d2691e;
-                font-weight: bold; }
-.v {color: #d40000;
-    font-weight: bold; }
-.back {display: block;
-       margin-left: -1px;
-       color: #d40000;
-       font-weight: bold;
-       line-height: 15px; }
-.information-form {width: 683px;
-                   margin-top: 12px;
-                   padding-left: 11px;
-                   display: grid;
-                   grid-template-columns: 330px 330px;
-                   column-gap: 24px;
-                   row-gap: 28px;
-                   font-family: Arial, sans-serif;
-                   font-size: 12px; }
-.information-form input[type="text"],
-.information-form input[type="email"],
-.information-form input[type="tel"],
-.information-form select {height: 41px;
-                          padding: 0 9px;
-                          border: 1px solid #999;
-                          background: #fff;
-                          border-radius: 3px;
-                          font-family: inherit;
-                          font-size: 11px; }
-.information-form ::placeholder {color: #757575; }
-.radios {font-family: "Times New Roman", serif;
-         font-size: 13px;
-         word-spacing: -2px; }
-.radios input {margin: 0 1px 0 0;
-	           width: 11px;
-	           height: 11px; }
-.radios input:nth-of-type(2) {margin-left: 3px; }
-.information-form textarea {grid-column: 1/-1;
-                            height: 56px;
-                            margin: 5px 6px 0 4px;
-                            border: 1px solid #999;
-                            font-family: monospace;
-                            font-size: 11px;
-                            padding: 3px; }
-.information-form textarea::placeholder {color: #000;}
-.buttons {grid-column: 1/-1;
-          margin-top: -2px;
-          display: flex;
-          gap: 3px; }
-.buttons button {height: 32px;
-                 padding: 0 8.7px;
-                 background: #efefef;
-                 border: 1px solid #999;
-                 border-radius: 4px;
-                 font-family: inherit;
-                 font-size: 11px; }
-
-
-.right {align-self: start;
-        background: #000;
-        color: #fff;
-        margin-top: 0px;
-        padding: 0 18px 18px 18px; }
-.right h2 {margin: 0 15px 10px 15px;
-           margin-left: -16px;
-           padding-left: 0px;           
-           font-size: 22px;
-           font-weight: bold;
-           letter-spacing: -1.4px;
-           line-height: 30px; } 
-.right h3 {margin: 14px 0px 12px 15px;
-           font-size: 20px;
-           font-weight: bold;
-           line-height: 18px;
-           margin-top: 15px;
-           margin-bottom: 2px; }
-.right h3:nth-of-type(2) {margin-top: 30px;}
-.right img {display: block;
-            width: 90%;
-            height: 143px;
-            margin: 0 15px;
-            border: 1px solid #333; }
-.right p {margin: 6px 15px 12px 15px;
-          font-size: 12.73px;
-          line-height: 16px;
-          word-break: break-word; }
-.more {display: none; }
-.toggle {display: none; }
-.toggle:checked + p .more {display: inline; }
-.read-more {color: #ffd0dc;
-            text-decoration: underline;
-            cursor: pointer; }
-.read-more::after {content: "Read more..."; }
-.toggle:checked + p .read-more::after {content: "Read less..."; }
-.extra {display: none; }
-#more2:checked ~ .extra {display: block; } 
-.extra h3 + .toggle + p {margin-top: 4px; }
-.right > p:nth-last-child(2), .extra p {margin-bottom: 0; }
-.right p:last-child {margin-bottom: 0;}
-
-
-footer {height: 65px;
-        background: var(--pink);
-        border-top: 1px solid var(--line);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .page-container {
+        width: 100%;
+        max-width: 1210px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0 0 0;
+    }
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px 0;
+        gap: 35px;
+        width: 100%;
+        padding-top: 22px;
+    }
+    header .logo {
+        width: 200px;
+        height: 60px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
-        font-size: 26px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #333333;
+    }
+    header .menu {
+        width: 820px;
+        height: 34px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        color: #333333;
+    }
+    header .button {
+        width: 120px;
+        height: 42px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        color: #333333;
+    }
+    .block1 {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #F1F1F1;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+    }
+    .block1-inner {
+        width: 100%;
+        max-width: 1210px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    .block1 .content {
+        width: 585px;
+        height: 267px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        color: #333333;
+    }
+    .block1 .img {
+        width: 585px;
+        height: 520px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+align-items: center;        
+        font-weight: 700;
+        font-size: 20px;
+        color: #333333;
+    }
+    .block2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .titlebackground {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .title {
+        width: 600px;
+        height: 80px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .title p {
+        font-family: 'Lora', serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #333333;
+    }
+    p {
+        margin: 0;
+        font-size: 20px;
+        font-family: 'Be Vietnam Pro', sans-serif;
         font-weight: bold;
-        font-style: italic;
-        line-height:30px; }
-footer sup {font-size: 20px;
-            margin: 0 8px 0 6px;
-            line-height: 0;
-            position: relative;
-            top: -5px; }
+    }
+
+    .block2 .container {
+        display: grid;
+        grid-template-columns: repeat(3, 380px);
+        justify-content: center;
+        gap: 30px;
+    }
+    .block2 .item {
+        width: 380px;
+        height: 420px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .block3 {
+        height: 580px;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #F1F1F1;
+        padding: 35px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .block3 .container {
+        display: grid;
+        grid-template-columns: repeat(5, 226px);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    .block3 .item {
+        width: 226px;
+        height: 300px;
+        background-color: #E2E2E2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1px;
+    }
+    .block4 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 45px;
+        padding: 10px 0;
+    }
+    .block4 .container {
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+    }
+    .block4 .item {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        height: 280px;
+        background-color: rgb(226, 226, 226);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 72px;
+        background-color: rgb(226, 226, 226);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        margin: 0 auto 0 auto;
+    }
+
 </style>
 </head>
 <body>
-<div class="page">
-<header id="top">
-	<h1>EXAMPLE CAFE MENU</h1>
-</header>
-<nav class="top-nav">
-	<a href="#top" class="home" title="Home">
-		<img src="ngôi nhà.jpg" alt="Home">
-	</a>
-	<a href="#starter">STARTER</a>
-	<a href="#main-courses">MAIN COURSES</a>
-	<a href="#desserts">DESSERTS</a>
-	<form class="search" action="#" onsubmit="event.preventDefault(); alert('Không tìm thấy từ khóa: ' + this.querySelector('input').value);">
-	<input type="text" aria-label="Search">
-	<button type="submit">Go</button>
-</form>
-</nav>
-<div class="layout">
-	<aside class="left">
-		<ul class="drinks">
-			<li><a href="#">Cafe Latte</a></li>
-			<li><a href="#">Capuchino</a></li>
-			<li><a href="#">Ocean Blue</a></li>
-			<li><a href="#">Ice-cream Cafe</a></li>
-			<li><a href="#">Order Online</a></li>
-		</ul>
-		<img src="team.jpg" alt="our team" class="team">
-	</aside>
+    <div class="page-container">
+        <header>
+            <div class="logo">Logo</div>
+            <div class="menu"><p>Menu</p></div>
+            <div class="button"><p>Button</p></div>
+        </header>
 
+        <div class="block1">
+            <div class="block1-inner">
+                <div class="content"><p>Content</p></div>
+                <div class="img"><p>Image</p></div>
+            </div>
+        </div>
 
-<main>
-	<h2 id="starter">Starter</h2>
-	<ul class="food">
-		<li>Chesnut and Mushroom Goujons <a href="#" class="v">(v)</a></li>
-		<li>Goat Cheese<a href="#" class="v">(v)</a></li>
-		<li class="special">HONEY SOY CHICKEN KEBABS<a href="#" class="v">(V)</a></li>
-		<li>Seafood Salad<a href="#" class="v">(v)</a></li>
-	</ul>
-	<a href="#top" class="back">Back to Top</a>
-	<h2 id="desserts">Desserts</h2>
-	<ul class="food">
-		<li>Lemon Sorbet <a href="#" class="v">(v)</a></li>
-		<li>Chocolate Mud Pie<a href="#" class="v">(v)</a></li>
-		<li>Pecan Pie<a href="#" class="v">(v)</a></li>
-		<li>Selection of fine Cheeses from Around the World<a href="#" class="v">(v)</a></li>
-	</ul>
-	<a href="#top" class="back">Back to Top</a>
-	<h2 id="information">Information</h2>
-	<form class="information-form" action="#">
-		<input type="text" placeholder="First Name">
-		<input type="text" placeholder="Last Name'">
-		<input type="email" placeholder="Email">
-		<input type="tel" placeholder="Telephone">
-		<select>
-			<option>USA</option>
-			<option>Vietnam</option>
-			<option>Japan</option>
-     	</select>
-     	<div class="radios">
-     		<label><input type="radio" name="who" value="vn"> Vietnamese</label>
-     		<label><input type="radio" name="who" value="foreign"> Foreigner</label>
-     	</div>
-     	<textarea placeholder="Comment"></textarea>
-     	<div class="buttons">
-     		<button type="submit">Submit</button>
-     		<button type="reset">Cacel</button>
-     	</div>
-     </form>
-</main>
+        <div class="block2">
+            <div class="titlebackground">
+                <div class="title"><p>Title</p></div>
+            </div>
+            <div class="container">
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+            </div>
+        </div>
 
+        <div class="block3">
+            <div class="titlebackground">
+                <div class="title"><p>Title</p></div>
+            </div>
+<div class="container">
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+            </div>
+        </div>
 
-<aside class="right">
-	<h2>Events</h2>
-	<h3>Regular Meetings</h3>
-	<img src="meeting.jpg" alt="Regular Meetings">
-	<input type="checkbox" id="more1" class="toggle">
-	<p>Host your regular team meetings or activities in the comfort of your own private room. <span class="more">Charge up on Kith's aromatic coffee and delectable dishes for that extra boost in your work!</span><label for="more1" class="read-more"></label></p>
-
-
-
-	<h3>Product Launches</h3>
-	<img src="cafe.jpg" alt="Product Launches">
-	<input type="checkbox" id="more2" class="toggle">
-	<p>Launch your product with ease in a space that truly fits its image. <span class="more">Create an unforgettable experience for your guests with our spacious outlets! Whether you want to host an intimate celebration or launch an event for hundreds of guests, Kith's space is customisable to your needs</span><label for="more2" class="read-more"></label></p>
-
-</aside>
-</div>
-<footer>
-	ABC Company <sup>&copy;</sup> - 12345678 - abccoffee@gmail.com
-</footer>
-</div>
+        <div class="block4">
+            <div class="titlebackground">
+                <div class="title"><p>Title</p></div>
+            </div>
+            <div class="container">
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+                <div class="item"><p>Item</p></div>
+            </div>
+        </div>
+            <footer><p>Footer</p></footer>
+    </div>
 </body>
 </html>
